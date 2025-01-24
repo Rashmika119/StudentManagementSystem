@@ -1,6 +1,4 @@
-package org.example;
-
-import java.util.Scanner;
+package org.example.DTO;
 
 public class Student {
     //constructor: prompt user to enter students name and the year
