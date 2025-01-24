@@ -25,7 +25,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your choice: ");
-        int choice = scanner.nextInt();
+        choice = scanner.nextInt();
 
         Connection conn=null;
         switch (choice) {
