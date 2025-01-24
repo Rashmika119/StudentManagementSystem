@@ -11,7 +11,7 @@ public class Update {
             if(!attribute.equals("firstName") || attribute.equals("lasName") || attribute.equals("courses")){
 
                 preparedStatement.setString(1,value.toString());
-            }else if(attribute.equals("gradeYear") || attribute.equals("tuitionBalance"){
+            }if(attribute.equals("gradeYear") || attribute.equals("tuitionBalance")){
                 preparedStatement.setInt(1,Integer.parseInt(value.toString()));
             }
             preparedStatement.setString(2,StudentID);
