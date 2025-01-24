@@ -6,11 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Retrieve {
-    public String viewStudents(String id, Connection conn) {
+    public String viewStudents(int id, Connection conn) {
         String sql="select * from students where student_id=?";
         StringBuilder result=new StringBuilder();
         try(PreparedStatement preparedStatement=conn.prepareStatement(sql)){
-            preparedStatement.setString(1, id);
+            preparedStatement.setString(1, String.valueOf(id));
             ResultSet res=preparedStatement.executeQuery();
             if(res.next()){
                 String first_name=res.getString("first_name");
