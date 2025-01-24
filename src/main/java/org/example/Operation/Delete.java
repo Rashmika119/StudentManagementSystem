@@ -5,10 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class Delete {
-    public String DeleteStudent(String StudentID, Connection conn){
+    public String DeleteStudent(int StudentID, Connection conn){
         String sql="DELETE FROM students WHERE student_id=?";
         try(PreparedStatement preparedStatement=conn.prepareStatement(sql)){
-            preparedStatement.setInt(1, Integer.parseInt(StudentID));
+            preparedStatement.setInt(1, Integer.parseInt(String.valueOf(StudentID)));
             int rows=preparedStatement.executeUpdate();
             if(rows>0){
                 return "Successfully deleted the record of student with the employee ID: "+StudentID;
